@@ -9,7 +9,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables/tables.component';
-import { DataService } from './data.service';
+import { BaseService } from './data.service';
 
 @NgModule({
   imports: [
@@ -23,6 +23,6 @@ import { DataService } from './data.service';
     MatCheckboxModule
   ],
   declarations: [TablesComponent],
-  providers: [DataService]
+  providers: [BaseService]
 })
 export class TablesModule {}

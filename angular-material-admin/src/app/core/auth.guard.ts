@@ -10,17 +10,30 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router) {}
+
+  constructor(private routes: Router) { }
+
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
-  ): Observable<boolean> | Promise<boolean> | boolean {
-    if (localStorage.getItem('isLoggedin')) {
+    state: RouterStateSnapshot): boolean {
+      console.log('ici');
+    if (localStorage.getItem('access_token') != null) {
+      console.log(localStorage.getItem('access_token'));
       return true;
+    } else {
+      console.log('tti');
+      this.routes.navigate(['/login']);
+      return false;
+    }
+  }
+
+  logout(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot) {
+    localStorage.clear();
+      this.routes.navigate(['/login']);
     }
 
-    this.router.navigate(['/login']);
-    return false;
-  }
 }
