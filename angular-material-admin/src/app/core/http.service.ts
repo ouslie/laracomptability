@@ -15,14 +15,11 @@ export class HttpService implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('ici');
     return Observable.fromPromise(this.handleAccess(request, next));
   }
 
   private async handleAccess(request: HttpRequest<any>, next: HttpHandler):
       Promise<HttpEvent<any>> {
-        console.log('ici2');
-
     const token = await this.Token.get();
     let changedRequest = request;
     // HttpHeader object immutable - copy values
