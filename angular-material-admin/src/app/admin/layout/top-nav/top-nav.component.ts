@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthGuard } from '../../../core/auth.guard';
+import { SelectorComponent } from '../../tables/selector/selector.component';
 
 @Component({
   selector: 'app-top-nav',

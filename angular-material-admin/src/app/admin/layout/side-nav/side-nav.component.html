@@ -29,8 +29,13 @@
     </a>
     <ul class="nested submenu" [class.expand]="showMenu">
       <li>
-        <a href="javascript:void(0)">
-          <span>Submenu</span>
+        <a [routerLinkActive]="'active'" [routerLink]="['/tables']">
+          <span>Bases</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLinkActive]="'active'" [routerLink]="['/account']">
+          <span>Compte</span>
         </a>
       </li>
       <li>
