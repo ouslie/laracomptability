@@ -50,13 +50,7 @@ export class LoginComponent implements OnInit {
   }
 
   handleError(error) {
-    this.error = error.error.error;
+    this.error = error.error;
   }
-    // onLogin() {
-    // localStorage.setItem('isLoggedin', 'true');
-    // this.router.navigate(['/dashboard']);
 
-  // }
-
-  
 }
