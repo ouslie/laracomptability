@@ -2,7 +2,7 @@
   <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/dashboard']">
     <mat-icon class="sidenav-icon">dashboard</mat-icon>Dashboard
   </a>
-  <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/charts']">
+  <!-- <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/charts']">
     <mat-icon class="sidenav-icon">bar_chart</mat-icon>Charts
   </a>
   <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/tables']">
@@ -22,10 +22,10 @@
   </a>
   <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/blank-page']">
     <mat-icon class="sidenav-icon">insert_drive_file</mat-icon>Blank Page
-  </a>
+  </a> -->
   <div class="nested-menu">
     <a mat-list-item (click)="showMenu=!showMenu">
-      <mat-icon class="sidenav-icon">add</mat-icon>Menu
+      <mat-icon class="sidenav-icon">settings</mat-icon>Configuration
     </a>
     <ul class="nested submenu" [class.expand]="showMenu">
       <li>
@@ -36,16 +36,6 @@
       <li>
         <a [routerLinkActive]="'active'" [routerLink]="['/account']">
           <span>Compte</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <span>Submenu</span>
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0)">
-          <span>Submenu</span>
         </a>
       </li>
     </ul>
