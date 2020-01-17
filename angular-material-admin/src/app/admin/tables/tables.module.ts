@@ -10,7 +10,6 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { TablesRoutingModule } from './tables-routing.module';
 import { TablesComponent } from './tables/tables.component';
-import { SelectorComponent } from './selector/selector.component';
 
 import { BaseService } from './data.service';
 
@@ -26,7 +25,7 @@ import { BaseService } from './data.service';
     MatCheckboxModule,
     MatSelectModule
   ],
-  declarations: [TablesComponent,SelectorComponent],
+  declarations: [TablesComponent],
   providers: [BaseService]
 })
 export class TablesModule {}

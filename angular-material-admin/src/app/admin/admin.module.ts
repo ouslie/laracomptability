@@ -9,7 +9,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AdminRoutingModule } from './admin-routing.module';
-import { SelectorComponent } from './tables/selector/selector.component';
 import { LayoutComponent } from './layout/layout.component';
 import { TopNavComponent } from './layout/top-nav/top-nav.component';
 import { SideNavComponent } from './layout/side-nav/side-nav.component';
@@ -28,6 +27,6 @@ import { MatSelectModule } from '@angular/material/select';
     MatListModule,
     MatSelectModule
   ],
-  declarations: [LayoutComponent, TopNavComponent, SideNavComponent, SelectorComponent]
+  declarations: [LayoutComponent, TopNavComponent, SideNavComponent]
 })
 export class AdminModule {}
